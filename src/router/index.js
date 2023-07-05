@@ -17,8 +17,12 @@ const routes = [
       {
         path: 'chatbots',
         name: 'chatbots',
-        // redirect: '/home/chatbots',
         component: () => import('@/views/home/components/chatbots-cpn.vue')
+      },
+      {
+        path: 'sortAnswer',
+        name: 'sortAnswer',
+        component: () => import('@/views/home/components/sortAnswer-cpn.vue')
       }
     ]
   },

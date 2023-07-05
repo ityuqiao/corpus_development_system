@@ -9,9 +9,12 @@
     </div>
     <div class="content">
       <div class="nav">
-        <router-link to="/home/chatbots">
-          <el-button class="elBtn" v-for="(item, index) in navBtn" :key="index"
-            :class="{ navBtnActive: currentBtnIndex === index }" @click="navBtnClick(index)">{{ item.name }}
+        <router-link :to="item.to" v-for="(item, index) in navBtn" :key="index">
+          <el-button
+            class="elBtn"
+            :class="{ navBtnActive: currentBtnIndex === index }"
+            @click="navBtnClick(index)"
+            >{{ item.name }}
           </el-button>
         </router-link>
       </div>
@@ -29,12 +32,12 @@ export default {
       currentBtnIndex: 0,
       navBtn: [
         {
-          name: "聊天机器人",
+          name: "ChatBots",
           to: "/home/chatbots",
         },
         {
-          name: "主要按钮",
-          to: "",
+          name: "强化学习",
+          to: "/home/sortAnswer",
         },
         {
           name: "主要按钮",
@@ -48,12 +51,12 @@ export default {
           name: "主要按钮",
           to: "",
         },
-      ]
+      ],
     };
   },
   methods: {
     navBtnClick(index) {
-      this.currentBtnIndex = index
+      this.currentBtnIndex = index;
     },
   },
 };

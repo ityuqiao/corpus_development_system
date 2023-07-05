@@ -3,7 +3,7 @@ import axios from "axios";
 const request = axios.create({
     baseURL: '/api',
     // baseURL: '/api',
-    timeout: 1000 * 15,
+    timeout: 1000 * 30,
     withCredentials: false
 })
 
