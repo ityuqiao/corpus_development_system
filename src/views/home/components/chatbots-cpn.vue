@@ -10,8 +10,8 @@
 							src="../../../assets/img/blur-book.jpg"
 							alt=""
 						/>
-						<div class="chatContent">
-							<div v-html="markdownContent(item.content)"></div>
+						<div :class="{chatContent : true, userBoxBottom : item.role === 'user'}">
+							<div class="markdown" v-html="markdownContent(item.content)"></div>
 							<!-- {{ markdownContent(item.content) }} -->
 							<img
 								@click="changeAnswer(index)"
@@ -43,7 +43,7 @@
 		</div>
 		<div class="editorBox">
 			<rich-text-edit :value="editeValue" @input="changeValue"></rich-text-edit>
-			<p class="markdown">支持MarkDown格式</p>
+			<p class="markdownText">支持MarkDown格式</p>
 		</div>
 		<div class="footer">
 			<transition name="changeBtn">
@@ -72,7 +72,6 @@
 	import "@wangeditor/editor/dist/css/style.css";
 	import richTextEdit from "@/components/richTextEdit.vue";
 	import { getAnswer, submit } from "@/server/chatbots";
-	// import { data } from "./data";
 	export default {
 		name: "chatbots-cpn",
 		mounted() {
@@ -210,7 +209,10 @@
 </script>
 
 <style scoped>
-.markdown {
+.userBoxBottom {
+	padding-bottom: 20px !important;
+}
+.markdownText {
 	position: absolute;
 	font-weight: 500;
 	color: #ccc;
@@ -245,11 +247,12 @@
 .editorBox {
 	position: relative;
 	background-color: #fff;
-	width: 1655px;
+	/* width: 1215px; */
 	min-height: 330px;
 	border-radius: 20px;
 	margin-top: 30px;
 	padding-top: 20px;
+	margin-right: 15px;
 	margin-left: 10px;
 	padding-bottom: 50px;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -303,7 +306,7 @@
 	border: 1px solid #dfe8f1;
 	padding: 20px;
 	margin-left: 14px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	border-radius: 15px;
 	font-size: 22px;
 	max-width: 900px;
@@ -311,6 +314,7 @@
 
 .Inputbox {
 	margin-top: 35px;
+	display: flex;
 }
 
 .log .avatar {
@@ -328,7 +332,8 @@
 }
 
 .chatInput {
-	width: 1500px;
+	/* width: 1065px; */
+	flex: 1;
 	height: 60px;
 	margin-left: 15px;
 	padding-left: 30px;
@@ -351,6 +356,7 @@
 }
 
 .chatbox {
+	/* width: 1210px; */
 	padding-top: 15px;
 	padding-right: 20px;
 	padding-bottom: 25px;
@@ -375,6 +381,8 @@
 }
 
 .gptBtn {
+	margin-top: 3px;
+	margin-right: 15px;
 	margin-left: 10px;
 	height: 55px;
 	width: 135px;

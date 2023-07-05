@@ -62,7 +62,6 @@
 	margin: 0 20px;
 }
 .editor {
-	/* height: 100px !important; */
 	min-height: 260px;
 }
 </style>

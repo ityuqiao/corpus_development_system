@@ -6,9 +6,8 @@
 				<transition-group name="log">
 					<div class="log" v-for="(item, index) in data" :key="index">
 						<img class="avatar" src="../../../assets/img/blur-book.jpg" />
-						<div class="chatContent">
-							<div v-html="markdownContent(item.content)"></div>
-							<!-- {{ item.content }} -->
+						<div :class="{chatContent : true, userBoxBottom : item.role === 'user'}">
+							<div class="markdown" v-html="markdownContent(item.content)"></div>
 						</div>
 					</div>
 				</transition-group>
@@ -17,7 +16,8 @@
 						<Draggable v-for="(item, index) in list" :key="index">
 							<p class="order">{{ index + 1 }}.</p>
 							<div class="draggable-item">
-								{{ markdownContent(item.content) }}
+								<!-- {{ markdownContent(item.content) }} -->
+								<div class="markdown" v-html="markdownContent(item.content)"></div>
 								<img
 									src="../../../assets/img/shanchu.png"
 									class="deleteImg"
@@ -140,6 +140,9 @@
 </script>
 
 <style scoped>
+.userBoxBottom {
+	padding-bottom: 20px !important;
+}
 .chatbox .title {
 	font-size: 22px;
 	font-weight: 700;
@@ -173,9 +176,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	margin-top: 50px;
-	margin-left: 15px;
-	margin-bottom: 15px;
+	margin: 50px 15px 15px 15px;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 .getBtn {
@@ -223,7 +224,7 @@
 	border: 1px solid #dfe8f1;
 	padding: 20px;
 	margin-left: 14px;
-	padding-bottom: 40px;
+	padding-bottom: 30px;
 	border-radius: 15px;
 	font-size: 22px;
 	max-width: 900px;

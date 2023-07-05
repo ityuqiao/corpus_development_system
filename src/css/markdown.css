@@ -1,0 +1,164 @@
+.markdown .markdown-here-wrapper {
+  font-size: 16px;
+  line-height: 1.8em;
+  letter-spacing: 0.1em;
+}
+.markdown pre,
+.markdown code {
+  font-size: 14px;
+  font-family: Roboto, 'Courier New', Consolas, Inconsolata, Courier, monospace;
+  margin: auto 5px;
+}
+.markdown code {
+  white-space: pre-wrap;
+  border-radius: 2px;
+  display: inline;
+}
+.markdown pre {
+  font-size: 15px;
+  line-height: 1.4em;
+  display: block !important;
+}
+.markdown pre code {
+  white-space: pre;
+  overflow: auto;
+  border-radius: 3px;
+  padding: 1px 1px;
+  display: block !important;
+}
+.markdown strong,
+.markdown b {
+  color: #BF360C;
+}
+.markdown em,
+.markdown i {
+  color: #009688;
+}
+.markdown hr {
+  border: 1px solid #BF360C;
+  margin: 1.5em auto;
+}
+.markdown p {
+  margin: 0.1em 5px !important;
+}
+.markdown table,
+.markdown pre,
+.markdown dl,
+.markdown blockquote,
+.markdown q,
+.markdown ul,
+.markdown ol {
+  margin: 10px 5px;
+}
+.markdown ul,
+.markdown ol {
+  padding-left: 15px;
+}
+.markdown li {
+  margin: 10px;
+}
+.markdown li p {
+  margin: 10px 0 !important;
+}
+.markdown ul ul,
+.markdown ul ol,
+.markdown ol ul,
+.markdown ol ol {
+  margin: 0;
+  padding-left: 10px;
+}
+.markdown ul {
+  list-style-type: circle;
+}
+.markdown dl {
+  padding: 0;
+}
+.markdown dl dt {
+  font-size: 1em;
+  font-weight: bold;
+  font-style: italic;
+}
+.markdown dl dd {
+  margin: 0 0 10px;
+  padding: 0 10px;
+}
+.markdown blockquote,
+.markdown q {
+  border-left: 2px solid #009688;
+  padding: 0 10px;
+  color: #777;
+  quotes: none;
+  margin-left: 1em;
+}
+.markdown blockquote::before,
+.markdown blockquote::after,
+.markdown q::before,
+.markdown q::after {
+  content: none;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-style: bold !important;
+  color: #009688 !important;
+  text-align: center !important;
+  margin: 1.5em 5px !important;
+  padding: 0.5em 1em !important;
+}
+.markdown h1 {
+  font-size: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+.markdown h2 {
+  font-size: 20px !important;
+  border-bottom: 1px solid #eee !important;
+}
+.markdown h3 {
+  font-size: 18px;
+}
+.markdown h4 {
+  font-size: 16px;
+}
+.markdown table {
+  width: 100%;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  font: inherit;
+  border: 0;
+  margin: 0 auto;
+}
+.markdown tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.markdown table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+.markdown table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+.markdown table tr th,
+.markdown table tr td {
+  font-size: 16px;
+  border: 1px solid #CCC;
+  margin: 0;
+  padding: 5px 10px;
+}
+.markdown table tr th {
+  font-weight: bold;
+  color: #eee;
+  border: 1px solid #009688;
+  background-color: #009688;
+}

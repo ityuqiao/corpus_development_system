@@ -23,6 +23,11 @@ const routes = [
         path: 'sortAnswer',
         name: 'sortAnswer',
         component: () => import('@/views/home/components/sortAnswer-cpn.vue')
+      },
+      {
+        path: 'audit',
+        name: 'audit',
+        component: () => import('@/views/home/components/audit-cpn.vue')
       }
     ]
   },

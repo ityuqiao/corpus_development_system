@@ -40,8 +40,8 @@ export default {
           to: "/home/sortAnswer",
         },
         {
-          name: "主要按钮",
-          to: "",
+          name: "审核",
+          to: "/home/audit",
         },
         {
           name: "主要按钮",
